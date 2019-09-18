@@ -788,6 +788,14 @@
       go_version: '1.12.10'
 
 - job:
+    name: cloud-provider-openstack-multinode-csi-migration-test
+    parent: cloud-provider-openstack-test
+    description: |
+      Run cinder CSI driver migration test
+    run: playbooks/cloud-provider-openstack-multinode-csi-migration-test/run.yaml
+    nodeset: ubuntu-xenial-k8s-cluster-cpo
+
+- job:
     name: cluster-api-provider-openstack-image-build
     parent: cloud-provider-openstack-test
     description: |
